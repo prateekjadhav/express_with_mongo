@@ -6,20 +6,23 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-//const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 
 var app = express();
 
 
 
 // replace the uri string with your connection string.
-// const uri = "mongodb+srv://prateek:root@cluster0-ajayz.mongodb.net/test?retryWrites=true";
+// const uri = "mongodb+srv://prateek:root@cluster0-ubaiv.mongodb.net/test?retryWrites=true";
 // MongoClient.connect(uri, { useNewUrlParser: true }, function(err, client) {
 //    if(err) {
 //         console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
 //    }
 //    console.log('MongoDb Atlas Connected...');
-//    const collection = client.db("test").collection("devices");
+//    const collection = client.db("mytestdb").collection("users");
+//    collection.find().toArray(function(err, docs) {
+//     console.log(docs);
+//   })
 //    // perform actions on the collection object
 //    client.close();
 // });

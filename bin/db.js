@@ -4,12 +4,12 @@ var state = {
   db: null,
 }
 
-exports.connect = function(url, done) {
+exports.connect = function(url,database, done) {
   if (state.db) return done()
 
   MongoClient.connect(url, { useNewUrlParser: true },  function(err, db) {
     if (err) return done(err)
-    state.db = db
+    state.db = db.db(database);
     done()
   })
 }

@@ -25,8 +25,8 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-const uri = 'mongodb+srv://prateek:root@cluster0-ajayz.mongodb.net/test?retryWrites=true';
-db.connect(uri,function(err) {
+const uri = 'mongodb+srv://prateek:root@cluster0-ubaiv.mongodb.net/mytestdb?retryWrites=true';
+db.connect(uri,'mytestdb',function(err) {
   if (err) {
     console.log('Unable to connect to Mongo.')
     process.exit(1)
