@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 router.get('/list',function(req, res, next){
   var collection = db.get().collection("products");
   collection.find().toArray(function(err, products) {
-    res.render('list',{products});
+    res.render('list',{'products':products,'myname':'prateek'});
   })
   
 })

@@ -1,10 +1,18 @@
 div
-  table
+   
+  
+
+
+   table.table.table-hover
     thead
-      tr: th Products
+      tr
+        th Name
+        th Brand
+        th Id
     tbody
-      each product, i in products
+      each product in products
         tr
-          td 
-            //a(href='/admin/post/') #{products.name} - #{products.brand}
-            product.name
+          td=product.name
+          td=product.brand
+          td=product._id
+          
