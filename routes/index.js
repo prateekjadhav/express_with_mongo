@@ -4,16 +4,18 @@ var db = require('../bin/db');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  //res.render('index', { title: 'Express' });
   var collection = db.get().collection("products");
-
   collection.find().toArray(function(err, products) {
     res.send(products);
   })
 });
 
 router.get('/list',function(req, res, next){
-  res.render('list',{});
+  var collection = db.get().collection("products");
+  collection.find().toArray(function(err, products) {
+    res.render('list',{products});
+  })
+  
 })
 
 router.get('/add',function(req, res, next){

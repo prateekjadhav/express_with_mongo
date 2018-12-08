@@ -1,5 +1,10 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to List
+div
+  table
+    thead
+      tr: th Products
+    tbody
+      each product, i in products
+        tr
+          td 
+            //a(href='/admin/post/') #{products.name} - #{products.brand}
+            product.name
